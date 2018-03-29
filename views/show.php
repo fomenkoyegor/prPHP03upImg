@@ -15,7 +15,7 @@
 <?php //} ?>
 
 <a href="/cat">
-    <img src="<?=$src?>" alt="<?=$name?>" width="100%">
+    <img src="<?=$src?>" alt="<?=$name?>" width="850">
 </a>
 
 
