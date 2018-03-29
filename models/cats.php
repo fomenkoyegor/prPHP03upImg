@@ -39,3 +39,20 @@ function model_cats_getCatbyId($id){
     $cats=array_values($cats);
     return @$cats[0];
 }
+
+function model_cats_addToFav($id){
+    $fav = isset($_COOKIE["fav"]) ? json_decode($_COOKIE["fav"], true) : [];
+
+    $fav[]= $id;
+
+    setcookie("fav", json_encode($fav), time() + 3600 * 24, "/");
+}
+
+function model_cats_get_favorites(){
+    $fav = isset($_COOKIE["fav"]) ? json_decode($_COOKIE["fav"], true) : [];
+    $cats=model_cats_getAll();
+    $cats=array_filter($cats,function ($cat) use ($fav){
+        return in_array($cat["id"],$fav);
+    });
+    return $cats;
+};

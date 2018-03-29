@@ -13,10 +13,12 @@
 <!---->
 <!---->
 <?php //} ?>
-
+<a href="/headers?id=<?=$id?>">add to fav</a><br>
+<hr>
 <a href="/cat">
     <img src="<?=$src?>" alt="<?=$name?>" width="850">
-</a>
+</a><br><hr>
+<p><?=$id?></p>
 
 
 

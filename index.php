@@ -10,7 +10,9 @@ $ROUTES = [
     "/contacts" => ["ctrl" => "main", "action" => "contacts"],
     "/cat" => ["ctrl" => "cats", "action" => "index"],
     "/cat/show" => ["ctrl" => "cats", "action" => "show"],
+    "/cat/fav" => ["ctrl" => "cats", "action" => "fav"],
     "/cats/add" => ["ctrl" => "cats", "action" => "add"],
+    "/headers" => ["ctrl" => "main", "action" => "headers"],
     "/404" => ["ctrl" => "404", "action" => "index"]
 ];
 
